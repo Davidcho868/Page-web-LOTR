@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Unicase:wght@700&family=Open+Sans:wght@400;700&display=swap');
+
+
+/* CSS General */
+h1 h2 h3 {
+    font-family: 'Cormorant Unicase', serif;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* CSS par section */
+
+/* Header */
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url(img/perso.jpeg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 20px 0;
+}
+
+.container {
+    max-width: 1060px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.colorlien {
+    color: white;
+    text-decoration: none;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Cormorant Unicase', serif;
+    font-size: 20px;
+}
+
+header nav * {
+    margin: 0 15px;
+}
+
+header nav img {
+    height: 100px;
+}
+
+header .text {
+    text-align: center;
+    margin: 150px 0 180px;
+}
+
+header h1 {
+    font-size: 60px;
+}
+
+/* Section aventure */
+
+#aventure h2,
+#aventure>p {
+    text-align: center;
+}
+
+#aventure ol {
+    display: flex;
+    justify-content: space-between;
+    counter-reset: perso-counter;
+    list-style: none;
+}
+
+#aventure ol li {
+    counter-increment: perso-counter;
+    position: relative;
+}
+
+#aventure ol li::before {
+    content: "0" counter(perso-counter);
+    font-weight: bold;
+    font-family: "Cormorant Unicase", serif;
+    position: absolute;
+    color: rgba(79, 17, 34, 0.2);
+    font-size: 90px;
+    top: 10px;
+}
+
+/* section communauté */
+
+#commu {
+    text-align: center;
+    border: 2px solid rgb(79, 17, 34);
+    padding: 30px 20px 0;
+}
+
+#commu ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+#commu ul li {
+    width: 30%;
+    margin-bottom: 30px;
+    list-style: none;
+}
+
+#commu ul li h3 {
+    margin-bottom: 0;
+}
+
+#commu ul li img {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+/* Rencontre */
+
+#rencontre {
+    padding: 100px 0;
+    display: flex;
+    align-items: center;
+}
+
+#rencontre img {
+    flex-shrink: 0;
+    /*pour interdire que l'image se compresse*/
+    max-width: 300px;
+    width: 30%;
+    height: 250px;
+    margin-right: 50px;
+    object-fit: cover;
+    object-position: center top;
+}
+
+
+
+
+/* Footer */
+
+footer {
+    margin-top: 80px;
+    background-color: rgb(79, 17, 34);
+    color: white;
+}
+
+footer ul li {
+    list-style: none;
+}
+
+footer #go {
+    background-image: linear-gradient(to right,
+            rgba(79, 17, 34, 0) 25%,
+            rgba(79, 17, 34, 0.3) 35%,
+            rgba(79, 17, 34, 0) 75%),
+        url(../img/gandalf.jpg);
+    background-size: cover;
+    background-position: center 30%;
+    padding: 100px 0;
+    text-align: center;
+}
+
+footer #go a {
+    border: 2px solid white;
+    padding: 10px 30px;
+    display: inline-block;
+    margin: 15px 0;
+    font-family: "Cormorant Unicase", serif;
+    font-size: 20px;
+}
+
+footer>.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+}
